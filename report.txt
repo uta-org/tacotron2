@@ -1,0 +1,250 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 27 files
+Detected 5 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: tacotron2/hparams.py
+--------------------------------------------------------------------------------
+tacotron2/hparams.py:8:14: ERROR: Using member tf.contrib.training.HParams in deprecated module tf.contrib. tf.contrib.training.HParams cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: tacotron2/train.py
+--------------------------------------------------------------------------------
+tacotron2/train.py:115:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: tacotron2/waveglow/convert_model.py
+--------------------------------------------------------------------------------
+tacotron2/waveglow/convert_model.py:71:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: tacotron2/waveglow/mel2samp.py
+--------------------------------------------------------------------------------
+tacotron2/waveglow/mel2samp.py:142:8: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: tacotron2/waveglow/train.py
+--------------------------------------------------------------------------------
+tacotron2/waveglow/train.py:57:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'tacotron2'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/audio_processing.py'
+ outputting to 'tacotron2_v2/audio_processing.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/data_utils.py'
+ outputting to 'tacotron2_v2/data_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/distributed.py'
+ outputting to 'tacotron2_v2/distributed.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/hparams.py'
+ outputting to 'tacotron2_v2/hparams.py'
+--------------------------------------------------------------------------------
+
+8:14: ERROR: Using member tf.contrib.training.HParams in deprecated module tf.contrib. tf.contrib.training.HParams cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+89:8: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+93:8: INFO: Renamed 'tf.logging.info' to 'tf.compat.v1.logging.info'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/layers.py'
+ outputting to 'tacotron2_v2/layers.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/logger.py'
+ outputting to 'tacotron2_v2/logger.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/loss_function.py'
+ outputting to 'tacotron2_v2/loss_function.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/loss_scaler.py'
+ outputting to 'tacotron2_v2/loss_scaler.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/model.py'
+ outputting to 'tacotron2_v2/model.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/multiproc.py'
+ outputting to 'tacotron2_v2/multiproc.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/plotting_utils.py'
+ outputting to 'tacotron2_v2/plotting_utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/stft.py'
+ outputting to 'tacotron2_v2/stft.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/train.py'
+ outputting to 'tacotron2_v2/train.py'
+--------------------------------------------------------------------------------
+
+115:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/utils.py'
+ outputting to 'tacotron2_v2/utils.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/text/cleaners.py'
+ outputting to 'tacotron2_v2/text/cleaners.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/text/cmudict.py'
+ outputting to 'tacotron2_v2/text/cmudict.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/text/numbers.py'
+ outputting to 'tacotron2_v2/text/numbers.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/text/symbols.py'
+ outputting to 'tacotron2_v2/text/symbols.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/text/__init__.py'
+ outputting to 'tacotron2_v2/text/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/waveglow/convert_model.py'
+ outputting to 'tacotron2_v2/waveglow/convert_model.py'
+--------------------------------------------------------------------------------
+
+71:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/waveglow/denoiser.py'
+ outputting to 'tacotron2_v2/waveglow/denoiser.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/waveglow/distributed.py'
+ outputting to 'tacotron2_v2/waveglow/distributed.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/waveglow/glow.py'
+ outputting to 'tacotron2_v2/waveglow/glow.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/waveglow/glow_old.py'
+ outputting to 'tacotron2_v2/waveglow/glow_old.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/waveglow/inference.py'
+ outputting to 'tacotron2_v2/waveglow/inference.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/waveglow/mel2samp.py'
+ outputting to 'tacotron2_v2/waveglow/mel2samp.py'
+--------------------------------------------------------------------------------
+
+142:8: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'tacotron2/waveglow/train.py'
+ outputting to 'tacotron2_v2/waveglow/train.py'
+--------------------------------------------------------------------------------
+
+57:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
